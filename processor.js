@@ -8,13 +8,16 @@ module.exports = function processor(src, options) {
 
   const loaderPromise = loaderPromises.hasOwnProperty(options.path || 'auto')
     ? loaderPromises[options.path || 'auto']
-    : loader(options.env || process.env, options.path, {
+    : loader({env: options.env || process.env, ...(options.pluginOptions||{})}, options.path, {
         argv: false
       }).then((pluginsInfo) => pluginsInfo.plugins || [])
 
   loaderPromises[options.path || 'auto'] = loaderPromise
 
   return loaderPromise
-    .then((plugins) => postcss(plugins).process(src, { from: false }))
+    .then((plugins) => postcss(plugins).process(src, { 
+      from: (options.babel || {}).filename || "unknown filename", 
+      ...(options.processOptions || {})
+    }))
     .then((result) => result.css)
 }
