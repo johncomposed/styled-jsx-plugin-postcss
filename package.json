@@ -1,6 +1,6 @@
 {
-  "name": "styled-jsx-plugin-postcss",
-  "version": "4.0.1",
+  "name": "@johncomposed/styled-jsx-plugin-postcss",
+  "version": "4.0.2",
   "description": "Plugin to add PostCSS support to styled-jsx",
   "main": "index.js",
   "scripts": {
@@ -8,19 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/giuseppeg/styled-jsx-plugin-postcss.git"
+    "url": "git+https://github.com/johncomposed/styled-jsx-plugin-postcss.git"
   },
   "keywords": [
     "styled-jsx-plugin",
     "styled-jsx",
     "postcss"
   ],
-  "author": "Giuseppe Gurgone",
+  "author": "John Williams",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/giuseppeg/styled-jsx-plugin-postcss/issues"
+    "url": "https://github.com/johncomposed/styled-jsx-plugin-postcss/issues"
   },
-  "homepage": "https://github.com/giuseppeg/styled-jsx-plugin-postcss#readme",
+  "homepage": "https://github.com/johncomposed/styled-jsx-plugin-postcss#readme",
   "dependencies": {
     "postcss-load-config": "^2.1.2"
   },
